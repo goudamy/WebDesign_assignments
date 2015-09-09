@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<!--
+Author: Goudamy Sockalingam
+-->
+<html>
+    <head>
+        <title> Auto Complete</title>       	
+
+        <script language="JavaScript" type="text/javascript">
+
+            var books = [
+                "Implementing Analytics",
+                "Visualizing Data",
+                "Data Mining Discovering and Visualizing Patterns with Python",
+                "Data Science for Business",
+                "A Concise Guide to Compositional Data Analysis",
+                "Alternative Methods of Regression",
+                "How Algorithms Came to Rule Our World",
+                "Machine Learning and Statistics, by Lion Solver",
+                "Applied Data Science | Columbia University Course",
+                "Analyzing the Analyzers",
+                "Two books on programming interviews",
+                "Forecasting: principles and practice",
+                "Big Data Journal",
+                "Three data science journals",
+                "Practical Data Science with R",
+                "Machine Learning plus Intelligent Optimization",
+                "Advanced Database Marketing",
+                "Predictive Analytics: Microsoft Excel",
+                "Two new data science books from CRC Press",
+                "Delivering Business Analytics: Practical Guidelines for Best Practice",
+                "Secrets of the Big Data Revolution",
+                "My O'Reilly book collection",
+                "I could not resist adding this book",
+                "Two new books on data analysis with open source",
+                "60 statistics textbooks",
+                "5 books on data visualization",
+                "Forbes' recommended list",
+                "Naked Statistics: Stripping the Dread from the Data",
+                "Business Analytics: A Practitioner's Guide",
+                "SAS Books",
+                "A Practitioner's Guide to Business Analytics",
+                "Mining of Massive Data Sets",
+                "Two interesting books",
+                "Hadoop in Practice",
+                "Improving Accuracy Through Combining Predictions ",
+                "30 statistics handbooks",
+                "Causality",
+                "Handbook of Engineering Statistics",
+                "16 books for statistical consultants",
+                "Three popular data mining books",
+                "Statistics for Non-Statisticians",
+                "A few new books from the CRC Press",
+                "New journal: Decision Analytics", 
+                "Machine Learning in Action",
+                "Big Data - Principles and best practices of scalable realtime data",
+                "Handbook of Data Intensive Computing",
+                "Practical Text Mining and Statistical Analysis for Non-structured",
+                "New books on design of experiments (DOE)",
+                "Data Mining: Concepts and Techniques",
+                "Keyword Intelligence: Keyword Research for Search, Social, and Beyond",
+                "Journal of Data Science",
+                "Data Mining (Wiley / IEEE)",
+                "Big Data Now: Current Perspectives from O'Reilly Radar",
+                "Great statistics reference book covering a lot of topics",
+                "The R Journal",
+                "Data Analysis with Open Source Tools",
+                "Competing on Analytics: The New Science of Winning",
+                "Presenting to Win: The Art of Telling Your Story",
+                "Information Visualization",
+                "Encyclopedia of Machine Learning",
+                "Analyzing Data from Facebook, Twitter, Linkedin, and Other Social Media",
+                "Handbook of Natural Language Processing",
+                "Mining of Massive Datasets (free)",
+                "Business Analytics for Managers",
+                "Handbook of Fitting Statistical Distributions with R",
+                "Data Mining Techniques in CRM: Inside Customer Segmentation",
+                "10 new data mining books from IGI",
+                "Handbook of Statistical Analysis and Data Mining Applications",
+                "Big Data: A Revolution That Will Transform How We Live, Work, and Think (Hardcover) ",
+                "MapReduce Design Patterns: Building Effective Algorithms and Analytics for Hadoop and Other Systems",
+                "Hadoop: The Definitive Guide",
+                "Head First Design Patterns",
+                "Rapid Development",
+                "Design Patterns: Elements of Reusable Object-Oriented Software",
+                "Applied Cryptography: Protocols, Algorithms, and Source Code ",
+                "Agile Software Development: Principles, Patterns and Practices",
+                "The Algorithm Design Manual ",
+                "An Introduction to Statistical Learning: With Applications in R ",
+                "Pattern Recognition and Machine Learning ",
+                "Problem Solving with Algorithms and Data Structures Using Python ",
+                "Bayesian Data Analysis ",
+                "Causality: Models, Reasoning, and Inference ",
+                "Foundations of Statistical Natural Language Processing ",
+                "Interactive Data Visualization for the Web ",
+                "Agile Data Science: Building Data Analytics Applications with Hadoop ",
+                "Neural Networks for Pattern Recognition",
+                "Application of Semantic Networks in Natural Language Issues",
+                "Methodology To Develop Alternative Makespan Algorithm For Re-entrant Flow Shop Using Bottleneck Approach",
+                "Application of Automata Based Approach for Specification of Model Transformation Strategies",
+                "SOA and Supporting Software Processes Integrated with Self-Organizing Business Networks",
+                "Templates for Communicating Information about Software Requirements and Software Problems",
+                "Ontological Description of Gene Groups by the Multi-Attribute Statistically Significant Logical Rules",
+                "Hackers: Heroes of the Computer Revolution",
+                "Learn You a Haskell for Great Good!",
+                "Java Concurrency in Practice",
+                "Real World Haskell: Code You Can Believe In",
+                "Programming Language Pragmatics",
+                "Concepts, Techniques, and Models of Computer Programming",
+                "JavaScript: The Definitive Guide",
+                "Hacking: The Art of Exploitation",
+                "UML Distilled: A Brief Guide to the Standard Object Modeling Language"
+            ];
+
+            var scientist = [
+                "Isaac Newton",
+                "Albert Einstein",
+                "Neils Bohr",
+                "Charles Darwin",
+                "Louis Pasteur",
+                "Sigmund Freud",
+                "Galileo Galilei",
+                "Antoine Laurent Lavoisier",
+                "Johannes Kepler",
+                "Nicolaus Copernicus",
+                "Michael Faraday",
+                "James Clerk Maxwell",
+                "Claude Bernard",
+                "Franz Boas",
+                "Werner Heisenberg",
+                "Linus Pauling",
+                "Rudolf Virchow",
+                "Erwin Schrodinger",
+                "Ernest Rutherford",
+                "Paul Dirac",
+                "Andreas Vesalius",
+                "Tycho Brahe",
+                "Comte de Buffon",
+                "Ludwig Boltzmann",
+                "Max Planck",
+                "Marie Curie",
+                "William Herschel",
+                "Charles Lyell",
+                "Pierre Simon de Laplace",
+                "Edwin Hubble",
+                "Joseph J. Thomson",
+                "Max Born",
+                "Francis Crick",
+                "Enrico Fermi",
+                "Leonard Euler",
+                "Justus Liebig",
+                "Arthur Eddington",
+                "William Harvey",
+                "Marcello Malpighi",
+                "Christiaan Huygens",
+                "Carl Gauss (Karl Friedrich Gauss)",
+                "Albrecht von Haller",
+                "August Kekule",
+                "Robert Koch",
+                "Murray Gell-Mann",
+                "Emil Fischer",
+                "Dmitri Mendeleev",
+                "Sheldon Glashow",
+                "James Watson",
+                "John Bardeen",
+                "John von Neumann",
+                "Richard Feynman",
+                "Alfred Wegener",
+                "Stephen Hawking",
+                "Anton van Leeuwenhoek",
+                "Max von Laue",
+                "Gustav Kirchhoff",
+                "Hans Bethe",
+                "Euclid",
+                "Gregor Mendel",
+                "Heike Kamerlingh Onnes",
+                "Thomas Hunt Morgan",
+                "Hermann von Helmholtz",
+                "Paul Ehrlich",
+                "Ernst Mayr",
+                "Charles Sherrington",
+                "Theodosius Dobzhansky",
+                "Max Delbruck",
+                "Jean Baptiste Lamarck",
+                "William Bayliss",
+                "Noam Chomsky",
+                "Frederick Sanger",
+                "Lucretius",
+                "John Dalton",
+                "Louis Victor de Broglie",
+                "Carl Linnaeus",
+                "Jean Piaget",
+                "George Gaylord Simpson",
+                "Claude Levi-Strauss",
+                "Lynn Margulis",
+                "Karl Landsteiner",
+                "Konrad Lorenz",
+                "Edward O. Wilson",
+                "Frederick Gowland Hopkins",
+                "Gertrude Belle Elion",
+                "Hans Selye",
+                "J. Robert Oppenheimer",
+                "Edward Teller",
+                "Willard Libby",
+                "Ernst Haeckel",
+                "Jonas Salk",
+                "Emil Kraepelin",
+                "Trofim Lysenko",
+                "Francis Galton",
+                "Alfred Binet",
+                "Alfred Kinsey",
+                "Alexander Fleming",
+                "B. F. Skinner",
+                "Wilhelm Wundt",
+                "Archimedes"
+            ];
+            search = function () {
+
+            }
+            search.prototype = {
+                // to declare variables
+                init: function (id) {
+                    this.field = document.getElementById(id);
+                    this.create();
+                    this.field.onfocus = this.starting;
+                    this.field.onblur = this.stop;
+                },
+                starting: function () {
+                    var radio = document.auto1.s1.value;
+                    if (radio == "Books") {
+                        autoComp.loop();
+                    } else {
+                        autoComp.loop1();
+                    }
+
+                },
+                stop: function () {
+                    clearTimeout(autoComp.count);
+                    setTimeout("autoComp.hide()", 300);
+                },
+                hide: function () {
+                    this.helper.style.display = "none";
+                },
+                loop1: function () {
+                    var list = "";
+                    var value = autoComp.field.value;
+                  
+                        var noOfEntries = scientist.length;
+                        for (var i = 0; i < noOfEntries; i++) {
+                            if (value.toLowerCase() == scientist[i].substr(0, value.length).toLowerCase()) {
+                                list += '<a href ="javascript:autoComp.setBook(\'' + scientist[i] + '\');" style = "display :block ;width: 100%;font-size:13px;padding: 10px;border-bottom: solid 1px;border-left: solid 1px ;border-right: solid 1px ;color: #000;text-decoration: none;background: #FFF">' + scientist[i] + '</a>'
+
+                            }
+                     
+                    }
+                    if (list != "") {
+                        if (this.helperContent != list) {
+                            this.helperContent = list;
+                            this.helper.innerHTML = this.helperContent;
+                        }
+                        this.showHelper();
+                    } else {
+                        this.helper.style.display = "none";
+                    }
+                    autoComp.count = setTimeout("autoComp.loop1()", 200);
+                },
+                loop: function () {
+
+                    var list = "";
+                    var value = autoComp.field.value;
+                  
+
+                        var noOfEntries = books.length;
+                        for (var i = 0; i < noOfEntries; i++) {
+                            if (value.toLowerCase() == books[i].substr(0, value.length).toLowerCase()) {
+                                list += '<a href ="javascript:autoComp.setBook(\'' + books[i] + '\');" style = "display :block ;width: 100%;padding: 10px; font-size:13px ;border-bottom: solid 1px;border-left: solid 1px;border-right: solid 1px;color: #000;text-decoration: none;background: #FFF">' + books[i] + '</a>'
+
+                            }
+                        
+                    }
+                    if (list != "") {
+                        if (this.helperContent != list) {
+                            this.helperContent = list;
+                            this.helper.innerHTML = this.helperContent;
+                        }
+                        this.showHelper();
+                    } else {
+                        this.helper.style.display = "none";
+                    }
+                    autoComp.count = setTimeout("autoComp.loop()", 200);
+                },
+                setBook: function (books) {
+                    this.field.value = books;
+                    this.helper.style.display = "none";
+                },
+                setScientist: function (scientist) {
+                    this.field.value = scientist;
+                    this.helper.style.display = "none";
+                },
+                create: function () {
+                    this.helper = document.createElement("div");
+                    this.helper.style.width = (this.field.offsetWidth - 20) + "px";
+                    document.body.appendChild(this.helper);
+                    this.style();
+                    this.helper.style.display = "none";
+                    this.helper.style.position = "absolute";
+
+                },
+                style: function () {
+                    var position = {x: 0, y: 0};
+
+                    var e = this.field;
+                    while (e) {
+                        position.x += e.offsetLeft;
+                        position.y += e.offsetTop;
+                        e = e.offsetParent;
+                    }
+
+                    this.helper.style.left = position.x + "px";
+                    this.helper.style.top = (position.y + this.field.offsetHeight) + "px";
+
+                },
+                showHelper: function () {
+                    this.helper.style.display = "block";
+                }
+            }
+            var autoComp = new search();
+            window.onload = function () {
+            autoComp.init("search");
+
+            }
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <div align ="center">            
+            <br><br><br>            
+            <form name ="auto1">        
+                <input type = "radio" name = "s1" id = "s1" value = "Books" checked ="checked"  />  Book List
+                &nbsp;&nbsp;
+                <input type = "radio" name = "s1" id = "s1" value = "Scientist"  /> 100 Famous Scientist
+                <br> </br> <br> </br>
+                <input type="text" id="search" size = "21" maxlength="120"/> <input type ="submit" name ="search" value ="search" style = "color:#ffffff; background-color:#0095cd">
+
+            </form>
+
+        </div>
+    </body>
+</html>

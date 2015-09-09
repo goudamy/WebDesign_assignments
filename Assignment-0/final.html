@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<!--
+Author :Goudamy Sockalingam
+-->
+<html>
+    <head>
+        <title>Score Card</title>
+        <script type = "text/javascript">
+
+            var parameters = location.search.substring(1).split("&");
+            var firstVal = parameters[0].split("=");
+            ans1 = unescape(firstVal[1]);
+
+            var secondVal = parameters[1].split("=");
+            answ2 = unescape(secondVal[1]);
+
+            var third = parameters[2].split("=");
+            answ3 = unescape(third[1]);
+
+
+            function video() {
+                return ans1;
+            }
+            function score1() {
+                if (ans1 == 1) {
+                    return "100"
+                }
+                else {
+                    return "0"
+                }
+            }
+            function blank() {
+                return answ2;
+            }
+            function score2() {
+                if (answ2 == 1) {
+                    return "100"
+                }
+                else {
+                    return "0"
+                }
+            }
+            function mat() {
+                return answ3;
+            }
+            function score3() {
+                if (answ3 == 2) {
+                    return "100"
+                }
+                else {
+                    if (answ3 == 1) {
+                        return "50"
+                    } else {
+                        return "0"
+                    }
+                }
+            }
+
+
+
+        </script>    
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <article>
+            <header> <div align="center" style="display: block; text-align: center;background-color: lightgrey"> <b>Score Card</b> </div>
+            </header>
+        </article>
+        <br>
+        <fieldset> 
+            <br>
+            <br>
+            <details>
+                <summary> Quantitative section.</summary>
+                <p><b>Number of Questions Answered:2</b></p>
+                <p><b> Number of Correct Answers:<script> document.write(mat());</script> </b></p>
+                <p><b>Score:<script> document.write(score3());</script></b></p>
+            </details>
+            <br>
+            <details>
+                <summary> Reading Section.</summary>
+                <p><b> Number of Questions Answered:1</b></p>
+                <p><b> Number of Correct Answers:<script> document.write(blank());</script></b></p>
+                <p><b> Score:<script> document.write(score2());</script></b> </p>
+            </details>
+            <br>
+
+            <details>
+                <summary> Audio/Video section.</summary>
+                <p><b> Number of Questions Answered:1</b></p>
+                <p><b> Number of Correct Answers:<script> document.write(video());</script></b></p>
+                <p><b> Score:<script> document.write(score1());</script> </b></p>
+            </details>
+
+        </fieldset>
+        <div align="center">
+        
+                <p><font size="8">Thank you!!!</font></p>
+                <form action ="index.html" method = "get">
+                <input type="submit" value="Finish">
+                </form>
+
+           
+        </div>
+    </body>
+</html>

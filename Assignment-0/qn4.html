@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+author:Goudamy Sockalingam
+-->
+<html>
+    <head>
+        <title>Question 4</title>       
+        <script type = "text/javascript">             
+
+            function handleClick(myRadio) {
+
+                var parameters = location.search.substring(1).split("&");
+                var firstVal = parameters[0].split("=");
+                ans1 = unescape(firstVal[1]);
+                
+
+                var secondVal = parameters[1].split("=");
+                answ2 = unescape(secondVal[1]);
+                
+                var third = parameters[2].split("=");
+                answ3 = unescape(third[1]);
+                
+
+                var fourth = parameters[3].split("=");
+                answ4 = unescape(fourth[1]);
+                
+
+                document.getElementById('ans').value = ans1;
+                document.getElementById('ans2').value = answ2;
+                document.getElementById('ans3').value = answ3;
+                document.getElementById('ans4').value = answ4;
+
+             
+            }
+
+        </script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    </head>
+    <body>
+        <article>
+            <header> <div align="center" style="display: block; text-align: center;background-color: lightgrey">Question 4 </div>
+            </header>
+        </article>
+        <fieldset>
+            <form name = "form4" action = "qn5.html">
+                <aside style="display:block; float: left; width: 500px;padding-left :50px">
+                    <div> Watch the video and Answer the following question</div> <br>
+                    <div> what is the source as mentioned in the video </div>
+                    <br> </br>
+                    <br></br>
+
+                    <input type = "radio" name = "video" id = "nasa" value = "NASA.Gov" checked ="checked"  /> <label for = "nasa" > NASA.Gov 
+                    </label> &nbsp;&nbsp;
+                    <input type = "radio" name = "video" id = "data" value = "Data.Gov"  /> <label for = "data" > Data.Gov 
+                    </label> <br> </br> <br> </br>
+                    <input type = "radio" name = "video" id = "facebook" value = "facebook"  /> <label for = "facebook" > Facebook 
+                    </label>&nbsp;&nbsp;
+                    <input type = "radio" name = "video" id = "XYZ.net" value = "XYZ.net"  /> <label for = "nasa" > XYZ.net 
+                    </label>
+
+                    <br> <br>   
+                </aside>
+                 <div style = "margin:0 auto">   <video src="nasa.mp4" width=440 height=260 controls autoplay poster = "nasa1.png"></video></div>
+
+
+                &nbsp;&nbsp;   &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type ="hidden" name ="ans" id = "ans" >
+                <input type ="hidden" name ="ans2" id ="ans2">         
+                <input type ="hidden" name ="ans3" id ="ans3">  
+                <input type ="hidden" name ="an4" id = "ans4" >
+                <footer>
+                <input type ="submit" value ="submit & next question" onclick="handleClick(this)">
+
+                &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type ="submit" value ="cancel & clear selection">
+				</footer>
+            </form>
+
+        </fieldset>
+    </body>
+</html>

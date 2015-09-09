@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>GoogleCharts</title>
+
+            <style type="text/css">
+
+            body{ 
+				height: 100%;
+				margin: 0px;
+				position:absolute;
+				width: 100%;
+				padding: 0px;
+					}
+	            
+            #container_sub_div1{
+                height: 80px;
+                width: 1150px;
+                border-style:none;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                }
+                
+            #level2_sub_div1{
+                margin: 5px;
+                padding-top:0px;
+                width:1130px;
+                height:60px;
+                border-radius:40px;
+                border-style:groove;
+                background-color:#1280b4;
+                }
+
+            h3{
+      
+       	        padding-top: 20px; 
+                font-family: Monaco, monospace;
+                font-size: 1.2em;
+                color: white;
+            	text-align: center;
+            }
+                
+            h2{
+                margin:0 auto;
+                text-align:center;
+                padding-top:13px;
+            }
+   
+            #level3_sub_div1{
+      
+       	        padding:0; 
+                font-family: Monaco, monospace;
+                color: white;
+                margin: 0;
+                float:left;
+            	height:60px;
+    	        width:351px;
+    	        background-color:#fd090a;
+    	        border-top-left-radius:40px;
+    	        border-bottom-left-radius:40px;
+            }
+
+             #level3_sub_div2{
+      
+       	        padding:0; 
+                font-family: Monaco, monospace;
+                color:white;
+                margin:0;
+                float:left;
+        	    height:60px;
+        	    width:351px;
+    	        background-color:#fd090a; 
+            }
+                
+        #level3_sub_div3{
+      
+       	        padding:0; 
+                font-family: Monaco, monospace;
+                color:white;
+                margin:0;
+                float:left;
+            	height:60px;
+    	        width:265px;
+    	        background-color:#1280b4; 
+            }
+                
+        #triangle_right{
+                padding:0;
+                margin:0;
+   	            float:left;
+                width: 0;
+                height: 0;
+                border-top:30px solid transparent;
+                border-left:60px solid #f00;
+                border-bottom:30px solid transparent;
+            }
+
+        #triangle_right1{
+                padding:0;
+                margin:0;
+   	            float:left;
+                width: 0;
+                height: 0;
+                border-top:30px groove transparent;
+                border-left:60px solid #fd090a;
+                border-bottom:30px groove transparent;
+            }
+                
+        
+         #container{
+                height: 380px;
+                width: 1150px;
+                border-style:none;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                text-align: center;
+            }
+                
+        #cheese {
+                height:280px;
+                width: 500px;
+                border-style: outset;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                float: left;
+                text-align: left;
+            }    
+                
+        #sauce {
+                height:280px;
+                width: 570px;
+                border-style: outset;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                float: left;
+                text-align: left;
+            }
+            
+                
+        #build {
+                padding:0; 
+                font-size: larger;
+                color: white;
+                margin: 0;
+                margin-top: 2%;
+            	height:60px;
+    	        width:325px;
+    	        background-color: #000;
+                vertical-align: central;
+            }                        
+        
+        #cancel {
+                padding:0; 
+                font-size: larger;
+                color: white;
+                margin: 0;
+                margin-top: 2%;
+            	height:60px;
+    	        width:325px;
+    	        background-color: #000;
+                vertical-align: central;
+            }                      
+    </style>
+
+    </head>
+    <body style="background-color: #0094ff">
+        <p style="font-size: larger; font-weight: bold; font-size: x-large; text-align: center; color: white">BUILD YOUR OWN PIZZA!</p>
+        <br><br>
+        
+    	<div id="container_sub_div1">
+    
+    		<div id="level2_sub_div1">
+    
+    			<div id="level3_sub_div1">
+    				<h2> SIZE & CRUST </h2>
+    			</div>
+    			
+    			<div id="triangle_right"></div>
+    			
+    			<div id="level3_sub_div2">
+    				<h2> CHEESE & SAUCE </h2>
+    			</div>
+    			
+    			<div id="triangle_right1"></div>
+    			
+    			<div id="level3_sub_div3"> 
+    			    <h2>TOPPINGS </h2>
+    			</div>
+    
+    		</div>
+    	</div>
+        <br>
+        <div id="container">
+            <h1 style="font-weight: bold; color: #0094ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            CHOOSE CHEESE & SAUCE</h1>
+
+            <form>
+
+            <div id="cheese">
+                <p style="font-weight: bold; color: #0094ff">Select CHEESE?</p>
+                <br>
+                <input type="radio" id="mozzarella" name="cheese"/>Mozzarella<br><br>
+                      <input type="radio" id="cheddar" name="cheese"/>Cheddar<br><br>
+                <input type="radio" id="parmesan" name="cheese"/>Parmesan<br><br>
+          
+                <br>
+            
+                
+                
+            </div>
+
+            <div id="sauce">
+                <p style="font-weight: bold; color: #0094ff">Select Sauce</p>
+                <br>
+                <input type="radio" id="bbq" name="sauce"/>BBQ Sauce<br><br>
+                <input type="radio" id="marinara" name="sauce"/>Marinara Sauce<br><br>
+                <input type="radio" id="white" name="sauce"/>White Sauce<br><br>
+                <input type="radio" id="ranch" name="sauce"/>Ranch Sauce<br><br>
+				<input type="radio" id="garlic" name="sauce"/>Garlic Sauce<br><br>
+                <br>
+                
+                
+            </div>
+                <br><br>
+                <button type="submit" id="build" formaction="topping.html">BUILD</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" id="cancel" formaction="cheese.html">CANCEL</button>
+
+            </form>
+
+        </div>
+
+       
+    </body>
+</html>

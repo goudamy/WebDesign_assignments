@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>GoogleCharts</title>
+
+            <style type="text/css">
+
+            body{ 
+				height: 100%;
+				margin: 0px;
+				position:absolute;
+				width: 100%;
+				padding: 0px;
+					}
+	            
+            #container_sub_div1{
+                height: 80px;
+                width: 1150px;
+                border-style:none;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                }
+                
+            #level2_sub_div1{
+                margin: 5px;
+                padding-top:0px;
+                width:1130px;
+                height:60px;
+                border-radius:40px;
+                border-style:groove;
+                background-color:#1280b4;
+                }
+
+            h3{
+      
+       	        padding-top: 20px; 
+                font-family: Monaco, monospace;
+                font-size: 1.2em;
+                color: white;
+            	text-align: center;
+            }
+                
+            h2{
+                margin:0 auto;
+                text-align:center;
+                padding-top:13px;
+            }
+   
+            #level3_sub_div1{
+      
+       	        padding:0; 
+                font-family: Monaco, monospace;
+                color: white;
+                margin: 0;
+                float:left;
+            	height:60px;
+    	        width:351px;
+    	        background-color:#fd090a;
+    	        border-top-left-radius:40px;
+    	        border-bottom-left-radius:40px;
+            }
+
+             #level3_sub_div2{
+      
+       	        padding:0; 
+                font-family: Monaco, monospace;
+                color:white;
+                margin:0;
+                float:left;
+        	    height:60px;
+        	    width:351px;
+    	        background-color:#2f8fbd; 
+            }
+                
+        #level3_sub_div3{
+      
+       	        padding:0; 
+                font-family: Monaco, monospace;
+                color:white;
+                margin:0;
+                float:left;
+            	height:60px;
+    	        width:265px;
+    	        background-color:#1280b4; 
+            }
+                
+        #triangle_right{
+                padding:0;
+                margin:0;
+   	            float:left;
+                width: 0;
+                height: 0;
+                border-top:30px solid transparent;
+                border-left:60px solid #fd090a;
+                border-bottom:30px solid transparent;
+            }
+
+        #triangle_right1{
+                padding:0;
+                margin:0;
+   	            float:left;
+                width: 0;
+                height: 0;
+                border-top:30px groove transparent;
+                border-left:60px solid #2f8fbd;
+                border-bottom:30px groove transparent;
+            }
+                
+        
+         #container{
+                height: 380px;
+                width: 1150px;
+                border-style:none;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                text-align: center;
+            }
+        	#hand_tossed {
+                height:450px;
+                width: 280px;
+                border-style: outset;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                float: left;
+                text-align: left;
+            }         
+        
+		
+        #handmade_pan {
+                height:450px;
+                width: 280px;
+                border-style: outset;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                float: left;
+                text-align: left;
+            }
+			#gluten_free {
+                height:450px;
+                width: 280px;
+                border-style: outset;
+       	        margin:0 auto;
+           	    padding-top:305px;
+                background-color: #FFFFFF;
+                float: left;
+                text-align: left;
+            }    
+                
+                                      
+        #crunchy_thin_crust {
+                height:450px;
+                width: 280px;
+                border-style: outset;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                float: left;
+                text-align: left;
+            }
+                
+        #brooklyn_style {
+                height:450px;
+                width: 280px;
+                border-style: outset;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                float: left;
+                text-align: left;
+            }        
+                
+        #build {
+                padding:0; 
+                font-size: larger;
+                color: white;
+                margin: 0;
+                margin-top: 7%;
+            	height:60px;
+    	        width:325px;
+    	        background-color: #000;
+                vertical-align: central;
+            }                        
+        
+        #cancel {
+                padding:0; 
+                font-size: larger;
+                color: white;
+                margin: 0;
+                margin-top: 2%;
+            	height:60px;
+    	        width:325px;
+    	        background-color: #000;
+                vertical-align: central;
+            }                      
+    </style>
+
+    </head>
+    <body style="background-color: #0094ff">
+        <p style="font-size: larger; font-weight: bold; font-size: x-large; text-align: center; color: white">BUILD YOUR OWN PIZZA!</p>
+        <br><br>
+        
+    	<div id="container_sub_div1">
+    
+    		<div id="level2_sub_div1">
+    
+    			<div id="level3_sub_div1">
+    				<h2> SIZE & CRUST </h2>
+    			</div>
+    			
+    			<div id="triangle_right"></div>
+    			
+    			<div id="level3_sub_div2">
+    				<h2> CHEESE & SAUCE </h2>
+    			</div>
+    			
+    			<div id="triangle_right1"></div>
+    			
+    			<div id="level3_sub_div3"> 
+    			    <h2>TOPPINGS </h2>
+    			</div>
+    
+    		</div>
+    	</div>
+        <br>
+        <div id="container">
+            <h1 style="font-weight: bold; color: #0094ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            PICK YOUR SIZE & CRUST</h1>
+
+            <form>
+
+            <div id="hand_tossed">
+                <p style="font-weight: bold; color: #0094ff">HAND TOSSED</p>
+                Garlic seasoned crust with a rich, buttery taste. <br><br>
+                <input type="radio" id="small" value="s1" name="sizecrust"/>Small (10")<br><br>
+                <input type="radio" id="med" value="m1" name="sizecrust"/>Medium (12")<br><br>
+                <input type="radio" id="large" value="l1" name="sizecrust"/>Large (14")<br><br>
+                <input type="radio" id="xl" value="xl1" name="sizecrust"/>X-Large (16")<br><br>
+           
+                <p style="font-weight: bold; color: #0094ff">GLUTEN FREE</p>
+                Dominos pizza made with gluten free crust. <br><br>
+                     <input type="radio" id="small" value="s1" name="sizecrust"/>Small (10")<br><br><br><br><br><br>
+
+            </div>
+            <div id="handmade_pan">
+                <p style="font-weight: bold; color: #0094ff">HANDMADE PAN</p>
+                Two layers of cheese, toppings to the edge, and a crust that bakes up golden and crispy with a buttery taste. <br><br>                
+                <input type="radio" id="med" value="m2" name="sizecrust"/>Medium (12")<br><br>
+               
+            </div>
+
+            <div id="crunchy_thin_crust">
+                <p style="font-weight: bold; color: #0094ff">CRUNCHY THIN CRUST</p>
+                Thin enough for the optimum crispy to crunchy ratio. <br><br>        
+                <input type="radio" id="med" value="m3" name="sizecrust"/>Medium (12")<br><br>
+                <input type="radio" id="large" value="l3" name="sizecrust"/>Large (14")<br><br>
+              
+            </div>
+
+            <div id="brooklyn_style">
+                <p style="font-weight: bold; color: #0094ff">BROOKLYN STYLE</p>
+                Hand-stretched to be big, thin, and perfectly foldable. <br><br>
+                <input type="radio" id="large" value="l4" name="sizecrust"/>Large (14")<br><br>
+                <input type="radio" id="xl" value="xl4" name="sizecrust"/>X-Large (16")<br><br><br><br><br>
+
+            </div>
+		
+                
+                <button type="submit" id="build" formaction="cheese.html">BUILD</button>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" id="cancel" formaction="Home.html">CANCEL</button>
+
+            </form>
+
+        </div>
+
+    </body>
+</html>

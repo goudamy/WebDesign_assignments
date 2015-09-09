@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>GoogleCharts</title>
+
+            <style type="text/css">
+
+            body{ 
+				height: 100%;
+				margin: 0px;
+				position:absolute;
+				width: 100%;
+				padding: 0px;
+					}
+	            
+            #heading_container{
+                height: 80px;
+                width: 1150px;
+                border-style:none;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                }
+                
+            #heading{
+                margin: 5px;
+                padding-top:0px;
+                width:1130px;
+                height:60px;
+                border-radius:40px;
+                border-style:groove;
+                background-color: #c51919;
+                }
+
+          
+                
+            h1{
+                margin:0 auto;
+                text-align:center;
+                padding-top:13px;
+            }
+  
+        
+         #container{
+                height: 380px;
+                width: 1150px;
+                border-style:none;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #0094ff;
+                text-align: center;
+            }
+                
+        #pie {
+                height:550px;
+                width: 550px;
+                border-style: outset;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                float: left;
+            }    
+                
+        #donut {
+                height:550px;
+                width: 550px;
+                border-style: outset;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                float: left;
+            }
+            
+                
+        #home {
+                padding:0; 
+                font-size: larger;
+                color: white;
+                margin: 0;
+                margin-top: 2%;
+            	height:60px;
+    	        width:325px;
+    	        background-color: #000;
+                vertical-align: central;
+            }                        
+                            
+    </style>
+
+    <script type="text/javascript" src="https://www.google.com/jsapi"></script>
+    <script type="text/javascript">
+        google.load("visualization", "1.0", { packages: ["corechart"] });
+        google.setOnLoadCallback(drawPieChart);
+        google.setOnLoadCallback(drawDonutChart);
+
+        function drawPieChart() {
+            var pepperoni_cb = parseInt(localStorage.getItem('pepperoni_cb'));
+            var sausage_cb = parseInt(localStorage.getItem('sausage_cb'));
+            var beef_cb = parseInt(localStorage.getItem('beef_cb'));
+            var phillysteak_cb = parseInt(localStorage.getItem('phillysteak_cb'));
+            var chicken_cb = parseInt(localStorage.getItem('chicken_cb'));
+            var ham_cb =  parseInt(localStorage.getItem('ham_cb'));
+            var bacon_cb = parseInt(localStorage.getItem('bacon_cb'));
+            var salami_cb = parseInt(localStorage.getItem('salami_cb'));
+            var turkey_cb = parseInt(localStorage.getItem('turkey_cb'));
+            var pchicken_cb = parseInt(localStorage.getItem('pchicken_cb'));
+            var ssausage_cb = parseInt(localStorage.getItem('ssausage_cb'));
+			 var greenpeppers_cb = parseInt(localStorage.getItem('greenpeppers_cb'));
+            var mushrooms_cb = parseInt(localStorage.getItem('mushrooms_cb'));
+            var onions_cb = parseInt(localStorage.getItem('onions_cb'));
+            var redpeppers_cb = parseInt(localStorage.getItem('redpeppers_cb'));
+            var jalapeno_cb = parseInt(localStorage.getItem('jalapeno_cb'));
+            var tomatoes_cb = parseInt(localStorage.getItem('tomatoes_cb'));
+            var spinach_cb = parseInt(localStorage.getItem('spinach_cb'));
+            var blackolives_cb = parseInt(localStorage.getItem('blackolives_cb'));
+            var garlic_cb =  parseInt(localStorage.getItem('garlic_cb'));
+            var banana_cb =  parseInt(localStorage.getItem('banana_cb'));
+			 var provolone_cb = parseInt(localStorage.getItem('provolone_cb'));
+			  var chedder_cb = parseInt(localStorage.getItem('chedder_cb'));
+            var feta_cb = parseInt(localStorage.getItem('feta_cb'));
+            var parmesan_cb = parseInt(localStorage.getItem('parmesan_cb'));
+            var pineapple_cb =  parseInt(localStorage.getItem('pineapple_cb'));
+           var sauce_cb = parseInt(localStorage.getItem('sauce_cb'));
+            var data = google.visualization.arrayToDataTable([
+                ['Toppings', 'Checked'],
+                ['Pepperoni', pepperoni_cb ],
+                ['Sausage', sausage_cb],
+                ['Beef', beef_cb],
+                ['Philly Steak', phillysteak_cb],
+                ['Chicken', chicken_cb],
+                ['Ham', ham_cb],
+                ['Bacon', bacon_cb],
+                ['Salami', salami_cb],
+                ['Turkey', turkey_cb],
+				['Sliced Italian Sausage',ssausage_cb],
+				['Premium Chicken',pchicken_cb],
+                ['Green Peppers', greenpeppers_cb ],
+                ['Mushrooms', mushrooms_cb],
+                ['Onions', onions_cb],
+                ['Red Peppers', redpeppers_cb],
+                ['Jalapeno', jalapeno_cb],
+                ['Tomatoes', tomatoes_cb],
+                ['Spinach', spinach_cb],
+                ['Black Olives', blackolives_cb],
+                ['Garlic', garlic_cb],
+                ['Banana', banana_cb],
+				['Provolone', provolone_cb],
+			    ['Pineapple', pineapple_cb],
+				['Chedder Cheese', chedder_cb],
+				['Feta Cheese', feta_cb],
+				['Parmesan Cheese', parmesan_cb],
+				['HotSauce', sauce_cb],				
+            ]);
+
+            var options = {
+                title: ''
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('pie'));
+            chart.draw(data, options);
+        }
+
+        function drawDonutChart() {
+		  var pepperoni_cb = parseInt(localStorage.getItem('pepperoni_cb'));
+            var sausage_cb = parseInt(localStorage.getItem('sausage_cb'));
+            var beef_cb = parseInt(localStorage.getItem('beef_cb'));
+            var phillysteak_cb = parseInt(localStorage.getItem('phillysteak_cb'));
+            var chicken_cb = parseInt(localStorage.getItem('chicken_cb'));
+            var ham_cb =  parseInt(localStorage.getItem('ham_cb'));
+            var bacon_cb = parseInt(localStorage.getItem('bacon_cb'));
+            var salami_cb = parseInt(localStorage.getItem('salami_cb'));
+            var turkey_cb = parseInt(localStorage.getItem('turkey_cb'));
+            var pchicken_cb = parseInt(localStorage.getItem('pchicken_cb'));
+            var ssausage_cb = parseInt(localStorage.getItem('ssausage_cb'));
+            var greenpeppers_cb = parseInt(localStorage.getItem('greenpeppers_cb'));
+            var mushrooms_cb = parseInt(localStorage.getItem('mushrooms_cb'));
+            var onions_cb = parseInt(localStorage.getItem('onions_cb'));
+            var redpeppers_cb = parseInt(localStorage.getItem('redpeppers_cb'));
+            var jalapeno_cb = parseInt(localStorage.getItem('jalapeno_cb'));
+            var tomatoes_cb = parseInt(localStorage.getItem('tomatoes_cb'));
+            var spinach_cb = parseInt(localStorage.getItem('spinach_cb'));
+            var blackolives_cb = parseInt(localStorage.getItem('blackolives_cb'));
+            var garlic_cb =  parseInt(localStorage.getItem('garlic_cb'));
+            var banana_cb =  parseInt(localStorage.getItem('banana_cb'));
+			 var provolone_cb = parseInt(localStorage.getItem('provolone_cb'));
+			  var chedder_cb = parseInt(localStorage.getItem('chedder_cb'));
+            var feta_cb = parseInt(localStorage.getItem('feta_cb'));
+            var parmesan_cb = parseInt(localStorage.getItem('parmesan_cb'));
+            var pineapple_cb =  parseInt(localStorage.getItem('pineapple_cb'));
+           var sauce_cb = parseInt(localStorage.getItem('sauce_cb'));
+            var data = google.visualization.arrayToDataTable([
+                ['Toppings', 'Checked'],
+				['Pepperoni', pepperoni_cb ],
+                ['Sausage', sausage_cb],
+                ['Beef', beef_cb],
+                ['Philly Steak', phillysteak_cb],
+                ['Chicken', chicken_cb],
+                ['Ham', ham_cb],
+                ['Bacon', bacon_cb],
+                ['Salami', salami_cb],
+                ['Turkey', turkey_cb],
+				['Sliced Italian Sausage',ssausage_cb],
+				['Premium Chicken',pchicken_cb],
+                ['Green Peppers', greenpeppers_cb ],
+                ['Mushrooms', mushrooms_cb],
+                ['Onions', onions_cb],
+                ['Red Peppers', redpeppers_cb],
+                ['Jalapeno', jalapeno_cb],
+                ['Tomatoes', tomatoes_cb],
+                ['Spinach', spinach_cb],
+                ['Black Olives', blackolives_cb],
+                ['Garlic', garlic_cb],
+                ['Banana', banana_cb],
+				['Provolone', provolone_cb],
+			    ['Pineapple', pineapple_cb],
+				['Chedder Cheese', chedder_cb],
+				['Feta Cheese', feta_cb],
+				['Parmesan Cheese', parmesan_cb],
+				['HotSauce', sauce_cb],
+				
+				
+            ]);
+
+           var options = {
+                title: '', pieHole: 0.5
+            };
+
+            var chart = new google.visualization.PieChart(document.getElementById('donut'));
+            chart.draw(data, options);
+
+           
+        }
+
+    </script>
+
+    </head>
+
+
+    <body style="background-color: #0094ff">
+        <p style="font-size: larger; font-weight: bold; font-size: x-large; text-align: center; color: white">BUILD YOUR OWN PIZZA!</p>
+        <br><br>
+        
+    	<div id="heading_container">
+    
+    		<div id="heading">
+    				<h1 style="color: #fff"> DASHBOARD </h1>
+    		</div>
+    	</div>
+        <br>
+        <div id="container">
+            
+            <form>
+
+            <div id="pie">
+                <p style="font-weight: bold; color: #0094ff">PIE CHART</p>
+            </div>
+
+            
+		 <div id="donut">
+                <p style="font-weight: bold; color: #0094ff">DONUT CHART</p>
+            </div>
+
+                <br><br>
+                <button type="submit" id="home" formaction="Home.html">HOME</button>
+            </form>
+
+        </div>
+
+       
+    </body>
+</html>

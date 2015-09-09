@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title> GoogleCharts</title>
+
+            <style type="text/css">
+
+            body{ 
+				height: 100%;
+				margin: 0px;
+				position:absolute;
+				width: 100%;
+				padding: 0px;
+					}
+	            
+            #container_sub_div1{
+                height: 80px;
+                width: 1150px;
+                border-style:none;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                }
+                
+            #level2_sub_div1{
+                margin: 5px;
+                padding-top:0px;
+                width:1130px;
+                height:60px;
+                border-radius:40px;
+                border-style:groove;
+                background-color:#1280b4;
+                }
+
+            h3{
+      
+       	        padding-top: 20px; 
+                font-family: Monaco, monospace;
+                font-size: 1.2em;
+                color: white;
+            	text-align: center;
+            }
+                
+            h2{
+                margin:0 auto;
+                text-align:center;
+                padding-top:13px;
+            }
+   
+            #level3_sub_div1{
+      
+       	        padding:0; 
+                font-family: Monaco, monospace;
+                color: white;
+                margin: 0;
+                float:left;
+            	height:60px;
+    	        width:351px;
+    	        background-color:#fd090a;
+    	        border-top-left-radius:40px;
+    	        border-bottom-left-radius:40px;
+            }
+
+             #level3_sub_div2{
+      
+       	        padding:0; 
+                font-family: Monaco, monospace;
+                color:white;
+                margin:0;
+                float:left;
+        	    height:60px;
+        	    width:351px;
+    	        background-color:#fd090a; 
+            }
+                
+        #level3_sub_div3{
+      
+       	        padding:0; 
+                font-family: Monaco, monospace;
+                color:white;
+                margin:0;
+                float:left;
+            	height:60px;
+    	        width:265px;
+    	        background-color:#fd090a; 
+            }
+                
+        #triangle_right{
+                padding:0;
+                margin:0;
+   	            float:left;
+                width: 0;
+                height: 0;
+                border-top:30px solid transparent;
+                border-left:60px solid #fd090a;
+                border-bottom:30px solid transparent;
+            }
+
+        #triangle_right1{
+                padding:0;
+                margin:0;
+   	            float:left;
+                width: 0;
+                height: 0;
+                border-top:30px groove transparent;
+                border-left:60px solid #fd090a;
+                border-bottom:30px groove transparent;
+            }
+                
+        
+         #container{
+                height: 380px;
+                width: 1150px;
+                border-style:none;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                text-align: center;
+            }
+                
+        #meats {
+                
+                width: 500px;
+				height:500px;
+                border-style: outset;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                float: left;
+                text-align: left;
+            }    
+                
+        #nonmeats {
+                
+                width: 570px;
+				height:500px;
+                border-style: outset;
+       	        margin:0 auto;
+           	    padding-top:5px;
+                background-color: #FFFFFF;
+                float: left;
+                text-align: left;
+            }
+            
+                
+        #build {
+                padding:0; 
+                font-size: larger;
+                color: white;
+                margin: 0;
+                margin-top: 2%;
+            	height:60px;
+    	        width:325px;
+    	        background-color: #000;
+                vertical-align: central;
+            }                        
+        
+        #cancel {
+                padding:0; 
+                font-size: larger;
+                color: white;
+                margin: 0;
+                margin-top: 2%;
+            	height:60px;
+    	        width:325px;
+    	        background-color: #000;
+                vertical-align: central;
+            }                      
+    </style>
+
+    </head>
+    <body style="background-color: #0094ff">
+        <p style="font-size: larger; font-weight: bold; font-size: x-large; text-align: center; color: white">BUILD YOUR OWN PIZZA!</p>
+        <br><br>
+        
+    	<div id="container_sub_div1">
+    
+    		<div id="level2_sub_div1">
+    
+    			<div id="level3_sub_div1">
+    				<h2> SIZE & CRUST </h2>
+    			</div>
+    			
+    			<div id="triangle_right"></div>
+    			
+    			<div id="level3_sub_div2">
+    				<h2> CHEESE & SAUCE </h2>
+    			</div>
+    			
+    			<div id="triangle_right1"></div>
+    			
+    			<div id="level3_sub_div3"> 
+    			    <h2>TOPPINGS </h2>
+    			</div>
+    
+    		</div>
+    	</div>
+        <br>
+        <div id="container">
+            <h1 style="font-weight: bold; color: #0094ff">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            PICK YOUR TOPPINGS</h1>
+
+            <form>
+
+            <div id="meats">
+                <p style="font-weight: bold; color: #0094ff">MEATS</p>
+                <input type="checkbox" id="pepperoni" name="meats"/>Pepperoni &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="sausage" name="meats"/>Sausage<br><br>
+                <input type="checkbox" id="beef" name="meats"/>Beef&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="phillysteak" name="meats"/>Philly Steak<br><br>
+                <input type="checkbox" id="chicken" name="meats"/>Chicken&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="ham" name="meats"/>Ham<br><br>
+                <input type="checkbox" id="bacon" name="meats"/>Bacon&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="salami" name="meats"/>Salami<br><br>
+                <input type="checkbox" id="turkey" name="meats"/>Turkey<br><br>
+				 <input type="checkbox" id="pchicken" name="meats"/>Premium Chicken<br><br>
+                <input type="checkbox" id="ssausage" name="meats"/>Sliced Italian Sausage<br><br>
+            </div>
+
+            <div id="nonmeats">
+			<p style="font-weight: bold; color: #0094ff">NON-MEATS</p>
+			<div align = "left">
+			<input type="checkbox" id="chedder" name="nonmeats"/>Cheddar Cheese &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+			 <input type="checkbox" id="greenpeppers" name="nonmeats"/>Green Peppers <br><br>
+				<input type="checkbox" id="feta" name="nonmeats"/>Feta Cheese&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp
+				<input type="checkbox" id="jalapeno" name="nonmeats"/>Jalapeno Peppers<br><br>
+                <input type="checkbox" id="parmesan" name="nonmeats"/>Shredded Parmesan Asiago&nbsp
+				<input type="checkbox" id="jalapeno" name="nonmeats"/>Jalapeno Peppers<br><br>
+				  <input type="checkbox" id="provolone" name="nonmeats"/>Shredded Provolone Cheese 
+				  <input type="checkbox" id="mushrooms" name="nonmeats"/>Mushrooms<br><br>
+				 <input type="checkbox" id="banana" name="nonmeats"/>Banana Peppers &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  <input type="checkbox" id="pineapple" name="nonmeats"/>Pineapple <br><br>
+			 <input type="checkbox" id="blackolives" name="nonmeats"/>Black Olives &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <input type="checkbox" id="garlic" name="nonmeats"/>Garlic<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;					 
+                <input type="checkbox" id="onions" name="nonmeats"/>Onions<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+			       
+                
+               
+				
+                
+				
+                <input type="checkbox" id="redpeppers" name="nonmeats"/>Roasted Red Peppers<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+           <input type="checkbox" id="spinach" name="nonmeats"/>Spinach<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;	
+                <input type="checkbox" id="tomatoes" name="nonmeats"/>Diced Tomatoes<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                  <input type="checkbox" id="sauce" name="nonmeats"/>Hot sauce<br><br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+				  	<span style="width:100px;display:inline-block;"></span>
+              </div> 
+ 
+            </div>
+                <br><br>
+                <input type="submit" id="build" formaction="Dashboard.html" onclick="save()" value="BUILD"/>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <button type="submit" id="cancel" formaction="Page3.html">CANCEL</button>
+
+            </form>
+
+        </div>
+
+        <script src="store.js"></script>
+       
+    </body>
+</html>

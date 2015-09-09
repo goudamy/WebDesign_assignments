@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<!--
+Author:Goudamy Sockalingam
+-->
+<html>
+    <head>
+        <script type="text/javascript">
+            
+             var parameters = location.search.substring(1).split("&");   
+             var firstVal = parameters[0].split("=");    
+             ans1 = unescape(firstVal[1]);
+            
+             
+             var secondVal = parameters[1].split("=");    
+             answ2 = unescape(secondVal[1]);
+             
+       
+             document.getElementById('ans').value = ans1;
+             document.getElementById('ans2').value = answ2;
+         
+            function updatedollar(elem) {
+                
+                 var parameters = location.search.substring(1).split("&");   
+             var firstVal = parameters[0].split("=");    
+             ans1 = unescape(firstVal[1]);
+            
+             
+             var secondVal = parameters[1].split("=");    
+             answ2 = unescape(secondVal[1]);
+        
+       
+             document.getElementById('ans').value = ans1;
+             document.getElementById('ans2').value = answ2;
+         
+
+                var initial = document.getElementById("dollars");
+                var curValue = parseInt(initial.innerHTML);
+                var val = parseInt(elem.dataset.dollars);
+                var finalAns = 0;
+                if (elem.checked)
+                {
+                    initial.innerHTML = val;
+                    finalAns = curValue;
+                }
+            }
+
+            function updatecompany(elem) {
+
+                var initial = document.getElementById("company");
+                var curValue = parseInt(initial.innerHTML);
+                var val = elem.dataset.company;
+                var finalAns = 0;
+                if (elem.checked)
+                {
+                    initial.innerHTML = val;
+                    finalAns = curValue;
+                }
+            }
+
+            function handleClick(myRadio) {
+                
+             var parameters = location.search.substring(1).split("&");   
+             var firstVal = parameters[0].split("=");    
+             ans1 = unescape(firstVal[1]);
+                      
+             var secondVal = parameters[1].split("=");    
+             answ2 = unescape(secondVal[1]);
+                  
+             document.getElementById('ans').value = ans1;
+             document.getElementById('ans2').value = answ2;
+            
+         
+
+                var value = document.form3.parta.value;
+                var value1 = document.form3.partb.value;
+
+                
+            }
+
+           
+        </script>
+        <title>Question3</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+         <article>
+            <header> <div align="center" style="display: block; text-align: center;background-color: lightgrey"> <b>Question3</b> </div>
+            </header>
+        </article>
+        <fieldset>
+ <form name = "form3" action = "qn4.html" method = "GET">
+     
+       
+       
+        <section style="display:block; overflow: hidden; padding:5px; ">
+            <aside style="display:block; float: left; width: 500px">
+                <div style="margin-left:10px; max-width: 500px;"> As per the latest Twitter news, complete the article snippet given by <br>      
+                    selecting appropriate choices for the blanks</div>
+                <br>
+                <br>
+                <br>
+                <br>
+                <br>
+               
+                    <div id ="batch" style = "float:left">
+                        <input type = "radio" data-dollars ="650" name = "parta" id = "mark1option1" value = "650"  onclick="updatedollar(this)" /> <label for ="mark1option1"> Option 1 Mark 1 :$650 </label> <br>                   
+                        <input type = "radio" data-dollars ="550" name = "parta" id = "mark1option2" value = "550" onclick="updatedollar(this)" /> <label for ="mark1option2" > Option 2 Mark 1 : $550</label><br>                
+                        <input type = "radio" data-dollars ="650" name = "parta" id = "mark1option3" value = "650" onclick="updatedollar(this)" /> <label for ="mark1option3" > Option 3 Mark 1 :$650 </label><br>
+
+                    </div>
+
+                    <div id ="batch1" style = "float:right">
+                        <input type = "radio" data-company = "Twitter" name = "partb" id = "mark2option1" value = "Twitter" onclick="updatecompany(this)" /> <label for ="mark2option1"> Option 1 Mark 2 :Twitter</label><br>
+                        <input type = "radio" data-company = "Google" name = "partb" id = "mark2option2" value = "Google" onclick="updatecompany(this)"  /> <label for ="mark2option2" > Option 1 Mark 2 :Google </label><br>
+                        <input type = "radio" data-company = "Facebook" name = "partb" id = "mark2option3" value = "Facebook" onclick="updatecompany(this)" /> <label for ="mark2option3" > Option 1 Mark 2 :Facebook </label><br> 
+       
+                    </div>
+            </aside>
+            <div style="margin-left:600px; max-width: 500px;">
+                "<br>Twitter wants more cash. The company announced two <br> $ <mark onclick="displ()"><span id="dollars">____</span></mark>  million debt offerings in a filling today, Each with a<br>
+                potential$100 increase provided that the sales are <br>oversubscribed.
+                Assuming fulltip, including $100 million <br> boosters, <mark onclick="displ1()"><span id="company">____</span></mark> will raise upto $1.5 billion with the two<br> offerings.<br></br>" <br></br>
+                source:"http://techcrunch.com/2014/09/10/twitter-raise-up<br>to-1-5b-in-debt-offering/" </div>
+
+
+        </section>
+       
+        <input type ="hidden" name ="ans" id = "ans" >
+       <input type ="hidden" name ="ans2" id ="ans2"> 
+        <footer>	   
+        <input type ="submit" value ="submit & next question"  onclick="handleClick(this)">
+        <input type ="submit" value ="cancel & clear selection">
+		</footer>
+    </form>
+        </fieldset>
+</body>
+</html>

@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!--
+Author :Goudamy Sockalingam
+-->
+<html>
+    <head>  
+        <title> Question2</title>
+        <script type="text/javascript" src="http://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+       function   handleClick(myRadio)   {
+    var parameters = location.search.substring(1).split("?");   
+    var firstVal = parameters[0].split("=");    
+    ans1 = unescape(firstVal[1]);   
+    document.getElementById('ans').value = ans1;
+           
+    }
+       
+          </script>
+          
+          
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head> 
+    <body>
+        <article>
+            <header> <div align="center" style="display: block; text-align: center;background-color: lightgrey"> <b>Question2</b> </div>
+            </header>
+        </article>
+        <fieldset>
+        <div> select the cosine theorem formula</div>
+        <br> </br>
+        <br></br>
+         <form name = "form2" action = "qn3.html">
+       <input type = "radio" name = "secondqn" id = "twoone" value ="one" checked ="checked"  /> <label for = "twoone" >  
+           <math>
+           <mrow>
+           <mi> cos </mi>
+           </mrow>
+           <mrow>
+           <mo>(</mo>
+           <mo> &alpha; </mo>
+           <mo> &PlusMinus;</mo>
+           <mo> &beta; </mo>
+           <mo>)</mo>
+           </mrow>
+           <mrow>
+           <mo> = </mo>
+           </mrow>
+           <mrow>
+           <mi> cos</mi>
+           <mo> &alpha;</mo>
+           <mi> cos </mi>
+           <mo> &beta; </mo>
+           <mo> &mp; </mo>
+           <mi> sin</mi>
+           <mo>&alpha;</mo>
+           <mi>sin</mi>
+           <mo>&beta;</mo>
+           </mrow>
+           </math>
+       </label>   
+       &nbsp
+       &nbsp
+       <input type = "radio" name = "secondqn" id = "twotwo" value ="two"  /> <label for = "twotwo" >  
+           <math>
+           <mrow>
+           <mi> sin </mi>
+           </mrow>
+           <mrow>
+           <mo>(</mo>
+           <mo> &alpha; </mo>
+           <mo> &PlusMinus;</mo>
+           <mo> &beta; </mo>
+           <mo>)</mo>
+           </mrow>
+           <mrow>
+           <mo> = </mo>
+           </mrow>
+           <mrow>
+           <mi> sin</mi>
+           <mo> &alpha;</mo>
+           <mi> cos </mi>
+           <mo> &beta; </mo>
+           <mo> &mp; </mo>
+           <mi> cos</mi>
+           <mo>&alpha;</mo>
+           <mi>sin</mi>
+           <mo>&beta;</mo>
+           </mrow>
+           </math>
+       </label>  
+       <br></br><br></br>
+       <input type = "radio" name = "secondqn" id = "twothree" value ="three"  /> <label for = "twothree" >  
+           <math>
+           <mrow>
+           <mi>sin</mi>
+           <mo> &alpha; </mo>
+           <mo> + </mo>
+            <mi>sin</mi>
+           <mo> &beta; </mo>
+           </mrow>
+           <mrow>
+           <mo> =</mo>
+           </mrow>
+           <mrow>
+           <mi> 2sin</mi>
+           </mrow>
+           <mo>(</mo>
+           <mfrac>
+           <mrow>
+            <mo> &alpha; </mo>
+           <mo> + </mo>
+           <mo> &beta; </mo>           
+           </mrow>
+           <mrow>
+           <mi>2</mi>
+           </mrow>           
+           </mfrac> 
+           <mo>)</mo>
+           <mrow>
+            <mi> cos</mi>
+           </mrow>
+           <mo>(</mo>
+           <mfrac>
+           <mrow>
+            <mo> &alpha; </mo>
+           <mo> - </mo>
+           <mo> &beta; </mo>           
+           </mrow>
+           <mrow>
+           <mi>2</mi>
+           </mrow>           
+           </mfrac> 
+           <mo>)</mo>
+           </math>
+       </label>
+       
+       &nbsp
+       &nbsp
+        <input type = "radio" name = "secondqn" id = "twofour"  value ="four" /> <label for = "twofour" >  
+           <math>
+           <mrow>
+           <mi>sin</mi>
+           <mo> &alpha; </mo>
+           <mo> - </mo>
+            <mi>sin</mi>
+           <mo> &beta; </mo>
+           </mrow>
+           <mrow>
+           <mo> =</mo>
+           </mrow>
+           <mrow>
+           <mi> 2cos</mi>
+           </mrow>
+           <mo>(</mo>
+           <mfrac>
+           <mrow>
+            <mo> &alpha; </mo>
+           <mo> + </mo>
+           <mo> &beta; </mo>           
+           </mrow>
+           <mrow>
+           <mi>2</mi>
+           </mrow>           
+           </mfrac> 
+           <mo>)</mo>
+           <mrow>
+            <mi> sin</mi>
+           </mrow>
+           <mo>(</mo>
+           <mfrac>
+           <mrow>
+            <mo> &alpha; </mo>
+           <mo> - </mo>
+           <mo> &beta; </mo>           
+           </mrow>
+           <mrow>
+           <mi>2</mi>
+           </mrow>           
+           </mfrac> 
+           <mo>)</mo>
+           </math>
+       </label>
+        
+        <br>
+        <br>
+		<footer>
+        <input type ="hidden" name = "ans" id ="ans">
+        <input type ="submit" value ="submit & next question" onclick="handleClick(this)">
+        
+        <input type ="submit" value ="cancel & clear selection">
+		</footer>
+        </form>
+        </fieldset>
+       </body>
+</html>

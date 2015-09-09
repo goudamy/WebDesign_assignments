@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<!--
+Author: Goudamy Sockalingam
+-->
+<html>
+    <head>
+        <title>Registration Form</title>
+        <script src = "User_JS_ObjectLibrary.js" ></script>       
+        <style>
+
+            #makeMeDroppable { float: center; width: 120px; height: 120px; border: 1px solid #999;background: blue; }
+        </style>
+
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.0/jquery.min.js"></script>
+        <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.9/jquery-ui.min.js"></script>
+
+        <script type="text/javascript">
+
+            $(init);
+
+            function init() {
+                $('#makeMeDraggable').draggable();
+                $('#makeMeDroppable').droppable({
+                    drop: handleDropEvent
+                });
+                $('#makeMeDraggable1').draggable();
+                $('#makeMeDroppable').droppable({
+                    drop: handleDropEvent
+                });
+                $('#makeMeDraggable2').draggable();
+                $('#makeMeDroppable').droppable({
+                    drop: handleDropEvent
+                });
+            }
+
+            function handleDropEvent(event, ui) {
+                var draggable = ui.draggable;
+                document.getElementById('button').disabled = false;
+                alert('The Image with ID "' + draggable.attr('id') + '" was dropped onto me!');
+            }
+
+        </script>
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+        <div align = "center">
+
+            <form name ="gform" style="background: #fafafa;
+                  padding: 20px;
+                  width: 500px;
+                  margin: 0 auto;
+                  border: 1px solid black;">
+                <h2 align = "center"> Registration Page</h2>
+                <table align = "center" style ="border-spacing:20px">
+                    <tr><td>First Name:</td><td> <input type ="text" name ="name" id ="name" placeholder = "Enter First Name and Last Name" required ><br></td>
+
+                    <tr><td>Email: </td><td><input type ="text" name = "email" id ="email" placeholder = "Enter email-id" required><br></td>
+
+                    <tr><td>SSN:</td><td><input type="text" name="ssn" id ="ssn" placeholder="XXX-XX-XXXX" required/></td></tr>
+
+                    <tr><td>Phone:</td><td><input type ="text" name ="phone" id="phone" placeholder="XXX-XXX-XXXX" required></td></tr>  
+                    <tr><td>URL:</td><td><input type ="text" name ="url" id ="url"></td></tr>  
+
+                    <tr><td>Password: </td><td><input type ="password" name = "password" id="password" placeholder = "Enter password"  title="Password must contain at least three uppercase letters, at least two lowercase letters,
+                                                      and two special characters." required></td><td>
+
+                    <tr><td>Confirm Password: </td><td><input type ="password" name ="password1" id="password1" placeholder = "Must be same as password" required></td></tr>
+
+                    <tr><td>D.O.B :</td><td><input type ="date" name ="bday" id ="bday"></td></tr>
+
+                    <tr><td>D.O.B with time:</td><td><input type = "datetime-local" name ="bday1" id="bday1"></td></tr>                       
+
+                    <tr><td>Credit card number:</td><td><input type ="text" name ="credit" id="credit" placeholder="XXXX-XXXX-XXXX-XXXX"></td></tr>
+
+
+                </table>  
+                <div id="content" style="height: 120px;">
+
+                    <img src = "folders.jpg" width = "70" height = "70" id="makeMeDraggable"> 
+                    <img src = "resume.png" width = "70" height = "70" id="makeMeDraggable1"> 
+                    <img src = "attachment.png" width = "70" height = "70" id="makeMeDraggable2"> <br>
+
+                    <img src="http://best-web-design-tools.com/wp-content/uploads/2013/07/dropzone-js.png" width = "300" height = "300" id="makeMeDroppable"> </div><br><br><br><br><br>
+
+           
+
+                <input type ="button" name = "submit" id = "button" value = "Create" disabled style= "
+                       font-family: 'Pacifico', cursive;font-size: 15px;">
+
+                <br><br>
+
+            </form>
+
+        </div>
+    </body>
+</html>

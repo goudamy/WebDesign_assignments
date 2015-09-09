@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--
+Author :Goudamy Sockalingam
+-->
+<html>
+    <head>
+        <title>TODO supply a title</title>
+               <script type = "text/javascript">
+        function handleClick(myRadio) {
+                var parameters = location.search.substring(1).split("&");
+                var firstVal = parameters[0].split("=");
+                ans1 = unescape(firstVal[1]);
+                
+
+                var secondVal = parameters[1].split("=");
+                answ2 = unescape(secondVal[1]);
+                
+                var third = parameters[2].split("=");
+                answ3 = unescape(third[1]);
+                
+
+                var fourth = parameters[3].split("=");
+                answ4 = unescape(fourth[1]);
+                
+                 var fifth = parameters[4].split("=");
+                answ5 = unescape(fifth[1]);
+                
+                 if (ans1 == "NASA.Gov") {
+                    var video = "1";
+                } else {
+                    var video = "0";
+                }
+                
+                if (answ2 == "650") {
+                    if (answ3 == "Twitter") {
+                        qn3 = "1";
+                    } else {
+                        qn3 = "0";
+                    }
+                } else {
+                    qn3 = "0";
+                }
+            
+                
+                if(answ4 == "one"){
+                   qn2 = 1 ;
+                }else{
+                    qn2 = 0;
+                }
+               
+                if (answ5 == "fourth"){
+                    qn1 = 1;
+                }else{
+                    qn1 = 0;
+                }
+                 
+              var mat = qn1 + qn2;
+             
+                document.getElementById('f1').value = video;
+                document.getElementById('f2').value = qn3;
+                document.getElementById('f3').value = mat; 
+            }
+                
+</script>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    </head>
+    <body>
+        <article>
+            <header> <div align="center" style="display: block; text-align: center;background-color: lightgrey"> <b>Survey</b> </div>
+            </header>
+        </article>
+        <fieldset>
+        <div> How do you like the center</div> <br>
+       
+        <div>Comments:</div>   
+        <textarea rows="5" cols="90" style="overflow:scroll"></textarea>
+        <br> </br>
+    
+        <div> select text area location</div> <br>
+        <label>city: </label> 
+        <input type="text" name="city" list="cityname">
+        <datalist id="cityname">
+            <option value="San Jose">
+            <option value="San Francisco">
+            <option value="Alameda">
+            <option value="Sunnyvale">
+            <option value="Fremont">
+        </datalist>
+        &nbsp; &nbsp; &nbsp; &nbsp;
+          <label> Room Number#: </label>
+        <input type="text" name="RoomNumber" list="room">
+        <datalist id="room">
+            <option value="Room 300">
+            <option value="Room 301">
+            <option value="Room 302">
+            <option value="Room 303">
+            <option value="Room 304">
+            
+        </datalist>  
+        <br></br>
+        <br></br>
+              
+         <form  name = "form5" action = "final.html" method = "get">
+       &nbsp;&nbsp;   &nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+          <input type ="hidden" name ="f1" id ="f1"  >
+          <input type ="hidden" name ="f2" id ="f2">         
+          <input type ="hidden" name ="f3" id ="f3">                
+        <footer>
+        <input type ="submit" value ="submit & Get Score" onclick="handleClick(this)">
+
+        &nbsp;&nbsp;  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <input type ="submit" value ="Skip & Get Score">
+		</footer>
+    </form>
+        </fieldset>
+    </body>
+</html>

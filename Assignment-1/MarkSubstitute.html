@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<!--
+Author:Goudamy Sockalingam
+-->
+<HTML>
+    <HEAD>
+        <title> Highlight Text </title>
+             <script language="JavaScript" type="text/javascript">
+       function highlight(text)                 
+      {    
+         text = text +','; 
+        return '<FONT style="BACKGROUND-COLOR: yellow">'+text+'</font>';
+    }
+       function highlight1(text1)                 
+      {   
+          text1 = text1 + '.';
+        return '<FONT style="BACKGROUND-COLOR: yellow">'+text1+'</font>';
+    }
+                         </script>
+                 
+            
+    </HEAD>
+    <BODY>
+        <br><br>
+        <fieldset>
+        <div style= "padding :50px">
+        <P>The stock quadrapuled just in a few months after its IPO as investigators have high <br>expectations
+            for the company to live up to. However, investors are especially<br>
+            antsy going into the report , seeing how stocks has lost more than half of its value<br>
+            in last few months alone.</p>
+        <p> Revenues passed the expectations by a long shot. GoPro posted revenues of <br>
+        <script>document.write(highlight('$633.9 million'));</script> compared to our consensus estimate of
+        <script>document.write(highlight1('$565 million'));</script>  
+        </div>
+        </fieldset>
+         </BODY>
+</HTML>
